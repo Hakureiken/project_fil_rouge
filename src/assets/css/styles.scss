@@ -7,6 +7,7 @@
     margin: 0;
 }
 
+// format téléphone
 nav {
     display: flex;
     justify-content: space-between;
@@ -456,9 +457,10 @@ form {
 .avisClient {
     position: relative;
     display: flex;
-    justify-content: flex-end;
-    padding-right:7.5% ;
-    width: 1440px;
+    // justify-content: flex-end;
+    flex-direction: column;
+    padding-right:0 ;
+    width: 100%;
     margin: auto;
 
     .portrait {
@@ -467,12 +469,13 @@ form {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
-        width: 62.5%;
-        height: 520px;
+        margin: auto;
+        width: 210px;
+        height: 350px;
 
         img {
-            height: 400px;
-            width: 300px;
+            height: 250px;
+            width: 175px;
             margin: 10px;
             transition-duration: .5s;
             order: 0;
@@ -482,8 +485,8 @@ form {
             
 
             &.active {
-                height: 500px;
-                width: 400px;
+                height: 300px;
+                width: 200px;
                 opacity: 1;
             }
             
@@ -493,20 +496,21 @@ form {
             position: absolute;
 
             &:first-of-type {
-                left: 33%;
-                bottom: 4.6%;
+                left: 30%;
+                bottom: 0%;
             }
 
             &:last-of-type {
-                left: 40%;
-                bottom: 5%;
+                left: 60%;
+                bottom: 0.4%;
             }
         }
     }
 
     .avis2 {
-        width: 37.5%;
+        width: 100%;
         padding:10px 7.5%;
+        text-align: center;
 
         span {
             color: $cyan;
@@ -519,15 +523,16 @@ form {
     }
 
     .avisTexte {
-        position: absolute;
-        width: 491px;
+        position: static;
+        margin: auto;
+        width: 100%;
         height: 315px;
         left: 54%;
         top: 25%;
         background-color: white;
         padding: 20px;
         border-radius: 5px;
-        box-shadow: 7px 20px 10px rgba(0,0,0,0.08);
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.08);
         line-height: 25px;
 
         &>h4 {
@@ -541,14 +546,16 @@ form {
 }
 
 footer {
-    height: 430px;
+    height: max-content;
     width: 100%;
-    padding: 100px 10px;
+    padding: 100px 0px 0 0;
     background-color: $littleLightGray;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     line-height: 2rem;
     position: relative;
+    text-align: center;
 
     h3 {
         color: $blueNav;
@@ -556,10 +563,11 @@ footer {
     }
 
     &>div {
-        width: 23%;
+        width: 50%;
     }
 
     &>div:first-child {
+
         h3 {
             font-size: 2rem ;
         }
@@ -573,18 +581,19 @@ footer {
     a {
         color: $darkGrey;
         text-decoration: none;
-        width: 45%;
+        // width: 45%;
     }
 
     .socialMedia {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .mentionLegal {
-        position: absolute;
-        left:0;
-        bottom: 0;
+        // position: absolute;
+        // left:0;
+        // bottom: 0;
         background-color: $blueNav;
         width: 100%;
         padding: 10px 0;
@@ -593,6 +602,7 @@ footer {
     }
 }
 
+// format tablette
 @media screen AND (min-width:768px){
     // finish
     nav {
@@ -1016,6 +1026,97 @@ footer {
         }
     }
 
+    .avisClient {
+        position: relative;
+        display: flex;
+        // justify-content: flex-end;
+        flex-direction: column;
+        padding-right:0 ;
+        width: 100%;
+        margin: auto;
+    
+        .portrait {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            margin: auto;
+            width: 400px;
+            height: 620px;
+    
+            img {
+                height: 400px;
+                width: 300px;
+                margin: 10px;
+                transition-duration: .5s;
+                order: 0;
+                opacity: .5;
+                object-fit: cover;
+                object-position: center;
+                
+    
+                &.active {
+                    height: 500px;
+                    width: 400px;
+                    opacity: 1;
+                }
+                
+            }
+    
+            svg {
+                position: absolute;
+    
+                &:first-of-type {
+                    left: 30%;
+                    bottom: 4.6%;
+                }
+    
+                &:last-of-type {
+                    left: 60%;
+                    bottom: 5%;
+                }
+            }
+        }
+    
+        .avis2 {
+            width: 100%;
+            padding:10px 7.5%;
+            text-align: center;
+    
+            span {
+                color: $cyan;
+            }
+    
+            h3 {
+                font-size: 2rem;
+                margin-top: 5px;
+            }
+        }
+    
+        .avisTexte {
+            position: static;
+            margin: auto;
+            width: 491px;
+            height: 315px;
+            left: 54%;
+            top: 25%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.08);
+            line-height: 25px;
+    
+            &>h4 {
+                margin-bottom: 20px;
+            }
+    
+            &>div>h4 {
+                margin-top: 30px;
+            }
+        }
+    }
+
     footer {
         height: 430px;
         width: 100%;
@@ -1070,7 +1171,7 @@ footer {
     }
 }
 
-
+// aucun format, juste une adaptation
 @media screen AND (max-width:910px) {
     .jumbotron {
         .avis {
@@ -1085,6 +1186,7 @@ footer {
     
 }
 
+// format PC
 @media screen AND(min-width:1400px){
     nav {
         display: flex;
@@ -1540,6 +1642,7 @@ footer {
         position: relative;
         display: flex;
         justify-content: flex-end;
+        flex-direction: row;
         padding-right:7.5% ;
         width: 1440px;
         margin: auto;

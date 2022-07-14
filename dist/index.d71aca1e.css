@@ -468,27 +468,28 @@ form button {
 }
 
 .avisClient {
-  width: 1440px;
-  justify-content: flex-end;
+  width: 100%;
+  flex-direction: column;
   margin: auto;
-  padding-right: 7.5%;
+  padding-right: 0;
   display: flex;
   position: relative;
 }
 
 .avisClient .portrait {
-  width: 62.5%;
-  height: 520px;
+  width: 210px;
+  height: 350px;
   flex-direction: row-reverse;
   align-items: center;
+  margin: auto;
   display: flex;
   position: relative;
   overflow: hidden;
 }
 
 .avisClient .portrait img {
-  height: 400px;
-  width: 300px;
+  height: 250px;
+  width: 175px;
   opacity: .5;
   object-fit: cover;
   object-position: center;
@@ -498,8 +499,8 @@ form button {
 }
 
 .avisClient .portrait img.active {
-  height: 500px;
-  width: 400px;
+  height: 300px;
+  width: 200px;
   opacity: 1;
 }
 
@@ -508,17 +509,18 @@ form button {
 }
 
 .avisClient .portrait svg:first-of-type {
-  bottom: 4.6%;
-  left: 33%;
+  bottom: 0%;
+  left: 30%;
 }
 
 .avisClient .portrait svg:last-of-type {
-  bottom: 5%;
-  left: 40%;
+  bottom: .4%;
+  left: 60%;
 }
 
 .avisClient .avis2 {
-  width: 37.5%;
+  width: 100%;
+  text-align: center;
   padding: 10px 7.5%;
 }
 
@@ -532,16 +534,17 @@ form button {
 }
 
 .avisClient .avisTexte {
-  width: 491px;
+  width: 100%;
   height: 315px;
   background-color: #fff;
   border-radius: 5px;
+  margin: auto;
   padding: 20px;
   line-height: 25px;
-  position: absolute;
+  position: static;
   top: 25%;
   left: 54%;
-  box-shadow: 7px 20px 10px #00000014;
+  box-shadow: 5px 5px 20px #00000014;
 }
 
 .avisClient .avisTexte > h4 {
@@ -553,11 +556,13 @@ form button {
 }
 
 footer {
-  height: 430px;
+  height: max-content;
   width: 100%;
+  text-align: center;
   background-color: #ededed;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 100px 10px;
+  padding: 100px 0 0;
   line-height: 2rem;
   display: flex;
   position: relative;
@@ -569,7 +574,7 @@ footer h3 {
 }
 
 footer > div {
-  width: 23%;
+  width: 50%;
 }
 
 footer > div:first-child h3 {
@@ -583,12 +588,12 @@ footer > div:first-child p {
 
 footer a {
   color: #626262;
-  width: 45%;
   text-decoration: none;
 }
 
 footer .socialMedia {
   flex-wrap: wrap;
+  justify-content: space-around;
   display: flex;
 }
 
@@ -598,9 +603,6 @@ footer .mentionLegal {
   color: #fff;
   background-color: #282f65;
   padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1036,6 +1038,94 @@ footer .mentionLegal {
     border-radius: 5px;
     margin-right: 0;
     padding: 15px 20px;
+  }
+
+  .avisClient {
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    padding-right: 0;
+    display: flex;
+    position: relative;
+  }
+
+  .avisClient .portrait {
+    width: 400px;
+    height: 620px;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .avisClient .portrait img {
+    height: 400px;
+    width: 300px;
+    opacity: .5;
+    object-fit: cover;
+    object-position: center;
+    order: 0;
+    margin: 10px;
+    transition-duration: .5s;
+  }
+
+  .avisClient .portrait img.active {
+    height: 500px;
+    width: 400px;
+    opacity: 1;
+  }
+
+  .avisClient .portrait svg {
+    position: absolute;
+  }
+
+  .avisClient .portrait svg:first-of-type {
+    bottom: 4.6%;
+    left: 30%;
+  }
+
+  .avisClient .portrait svg:last-of-type {
+    bottom: 5%;
+    left: 60%;
+  }
+
+  .avisClient .avis2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 7.5%;
+  }
+
+  .avisClient .avis2 span {
+    color: #79dcf2;
+  }
+
+  .avisClient .avis2 h3 {
+    margin-top: 5px;
+    font-size: 2rem;
+  }
+
+  .avisClient .avisTexte {
+    width: 491px;
+    height: 315px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: auto;
+    padding: 20px;
+    line-height: 25px;
+    position: static;
+    top: 25%;
+    left: 54%;
+    box-shadow: 5px 5px 20px #00000014;
+  }
+
+  .avisClient .avisTexte > h4 {
+    margin-bottom: 20px;
+  }
+
+  .avisClient .avisTexte > div > h4 {
+    margin-top: 30px;
   }
 
   footer {
@@ -1580,6 +1670,7 @@ footer .mentionLegal {
 
   .avisClient {
     width: 1440px;
+    flex-direction: row;
     justify-content: flex-end;
     margin: auto;
     padding-right: 7.5%;
