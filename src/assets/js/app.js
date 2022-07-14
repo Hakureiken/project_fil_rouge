@@ -30,8 +30,8 @@ swapToRight.addEventListener('click', function () {
         image1.classList.add('active');
 
         image0.style.transform = "translateX(-245%)";
-        image1.style.transform = "translateX(300px)";
-        image2.style.transform = "translateX(300px)";
+        image1.style.transform = "translateX(80%)";
+        image2.style.transform = "translateX(100%)";
     }
 
 })
