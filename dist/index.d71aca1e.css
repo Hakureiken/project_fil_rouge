@@ -1,0 +1,1692 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 80%;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 25px;
+  display: flex;
+}
+
+nav > div {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+nav > div #links {
+  height: max-content;
+  width: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: translate(0, 125.758%);
+}
+
+nav > div #links a.active {
+  color: #282f65;
+  position: relative;
+}
+
+nav > div #links a {
+  color: #aeaeae;
+  height: 100%;
+  align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+}
+
+nav > div #links a:nth-child(2) {
+  margin: 0 10px;
+}
+
+nav > div input {
+  display: none;
+}
+
+nav > div input:checked ~ #links {
+  transform: translate(100%, 125.758%);
+}
+
+nav span {
+  color: #282f65;
+  font-size: 2.2rem;
+}
+
+nav button {
+  display: none;
+}
+
+.jumbotron {
+  height: 500px;
+  width: 100%;
+  background: url("pexels-pixabay-358636_1.58092e00.png") 0 0 / 100% 100% no-repeat;
+  margin: 15px auto 0;
+  display: flex;
+}
+
+.jumbotron .title {
+  width: 50%;
+  padding: 100px 0 0 70px;
+}
+
+.jumbotron .title h1 {
+  color: #fff;
+  margin: 25px 0;
+  font-size: 3rem;
+}
+
+.jumbotron .title h1 span {
+  color: #c0dff8;
+}
+
+.jumbotron .title p {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 30px;
+}
+
+.jumbotron .avis {
+  width: 50%;
+  position: relative;
+}
+
+.jumbotron .avis .first {
+  background-color: #3e3e3e;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -100%);
+}
+
+.jumbotron .avis .second {
+  background-color: #0006;
+  border-radius: 5px;
+  padding: 5px 20px 5px 25px;
+  position: absolute;
+  top: 70%;
+  left: 49%;
+  transform: translate(-55%, -50%);
+}
+
+.jumbotron .avis img {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.jumbotron .avis #homme_rose {
+  top: 10%;
+  left: 58%;
+}
+
+.jumbotron .avis #homme_bleu {
+  top: 28%;
+  left: 21.5%;
+}
+
+.jumbotron .avis #homme_marron {
+  z-index: 1;
+  top: 33%;
+  left: 79%;
+}
+
+.jumbotron .avis #homme_chapeau {
+  z-index: 1;
+  top: 49%;
+  left: 29%;
+}
+
+.jumbotron .avis #homme_echarpe {
+  top: 55%;
+  left: 70%;
+}
+
+.jumbotron .avis #femme_violette {
+  top: 70%;
+  left: 35.5%;
+}
+
+.jumbotron .avis .box {
+  width: 299px;
+  height: 72px;
+  color: #fff;
+  background-color: #0006;
+  border-radius: 4px;
+  padding: 12px 16px;
+  line-height: 25px;
+  position: absolute;
+  top: 23%;
+  left: 36%;
+}
+
+.jumbotron .avis .box1 {
+  width: 252px;
+  height: 80px;
+  color: #fff;
+  text-align: center;
+  background-color: #0006;
+  border-radius: 4px;
+  padding: 16px 37px 16px 72px;
+  line-height: 25px;
+  position: relative;
+  top: 45%;
+  left: 26.5%;
+}
+
+.jumbotron .avis .box1 svg {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-70%, -60%);
+}
+
+form {
+  width: 100%;
+  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  box-shadow: 0 8px 40px #00000014;
+}
+
+form .searchWord {
+  width: 90%;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+}
+
+form .searchWord .loupe {
+  min-height: 100%;
+  align-items: center;
+  padding: 0 0 0 8px;
+  display: flex;
+}
+
+form .searchWord select {
+  color: #aeaeae;
+  width: 100%;
+  background-color: #0000;
+  border: none;
+  padding: 15px 7px;
+}
+
+form .searchType {
+  width: 90%;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+}
+
+form .searchType .house {
+  min-height: 100%;
+  align-items: center;
+  padding: 0 0 0 8px;
+  display: flex;
+}
+
+form .searchType select {
+  color: #aeaeae;
+  width: 100%;
+  background-color: #0000;
+  border: none;
+  padding: 15px 7px;
+}
+
+form .searchType select option {
+  color: #f8f8f8;
+}
+
+form .localisation {
+  width: 90%;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+}
+
+form .localisation .iconLocalisation {
+  min-height: 100%;
+  align-items: center;
+  padding: 0 0 0 8px;
+  display: flex;
+}
+
+form .localisation input {
+  color: #aeaeae;
+  width: 100%;
+  background-color: #0000;
+  border: none;
+  padding: 15px 7px;
+}
+
+form button {
+  width: 45%;
+  background-color: #ffa800;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.partners {
+  width: 90%;
+  margin: 100px auto 0;
+  padding-bottom: 50px;
+}
+
+.partners h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  position: relative;
+}
+
+.partners h2 div {
+  width: 175px;
+  height: 15px;
+  z-index: -2;
+  background-color: #79dcf2;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-29%, 120%);
+}
+
+.partners p {
+  color: #626262;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.partners > p {
+  margin-bottom: 4%;
+}
+
+.partners .container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.partners .container > div:first-child {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+
+.partners .container .information {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.partners .container .information > div {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.partners .container .information > div > span {
+  color: #79dcf2;
+  font-weight: 800;
+}
+
+.partners .container .information .fiable-efficace {
+  justify-content: space-around;
+  margin-top: 15px;
+  display: flex;
+}
+
+.partners .container .information .fiable-efficace .efficiency {
+  display: flex;
+}
+
+.partners .container .information .fiable-efficace .efficiency > svg {
+  margin-right: 20px;
+}
+
+.partners .container .information .fiable-efficace .efficiency span {
+  color: #282f65;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.partners .container .information .fiable-efficace .efficiency p {
+  color: #aeaeae;
+  font-size: 1rem;
+}
+
+.partners img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.partners .information {
+  padding-top: 35px;
+}
+
+.services {
+  width: 100%;
+  background-color: #ededed;
+  padding-top: 25px;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.services .containerCard {
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.services .containerCard .card {
+  width: 90%;
+  height: 404px;
+  background-color: #fff;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px 10px;
+  display: flex;
+}
+
+.services .containerCard .card p {
+  width: 70%;
+  margin: auto;
+}
+
+.services .containerCard .card button {
+  color: #ffa800;
+  background: none;
+  border: 1px solid #ffa800;
+  border-radius: 5px;
+  margin-right: 0;
+  padding: 15px 20px;
+}
+
+.estimation {
+  width: 100%;
+  background-color: #282f65;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  padding: 70px 50px;
+  display: flex;
+}
+
+.estimation p {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.estimation p span {
+  font-size: 2.8rem;
+}
+
+.estimation div {
+  align-items: center;
+  display: flex;
+}
+
+.estimation div input {
+  width: 250px;
+  height: 100%;
+  border: none;
+  padding: 12px;
+}
+
+.estimation div span {
+  color: #fff;
+  height: 100%;
+  background-color: #ffa800;
+  padding: 10.5px 25px;
+}
+
+.avisClient {
+  width: 1440px;
+  justify-content: flex-end;
+  margin: auto;
+  padding-right: 7.5%;
+  display: flex;
+  position: relative;
+}
+
+.avisClient .portrait {
+  width: 62.5%;
+  height: 520px;
+  flex-direction: row-reverse;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.avisClient .portrait img {
+  height: 400px;
+  width: 300px;
+  opacity: .5;
+  object-fit: cover;
+  object-position: center;
+  order: 0;
+  margin: 10px;
+  transition-duration: .5s;
+}
+
+.avisClient .portrait img.active {
+  height: 500px;
+  width: 400px;
+  opacity: 1;
+}
+
+.avisClient .portrait svg {
+  position: absolute;
+}
+
+.avisClient .portrait svg:first-of-type {
+  bottom: 4.6%;
+  left: 33%;
+}
+
+.avisClient .portrait svg:last-of-type {
+  bottom: 5%;
+  left: 40%;
+}
+
+.avisClient .avis2 {
+  width: 37.5%;
+  padding: 10px 7.5%;
+}
+
+.avisClient .avis2 span {
+  color: #79dcf2;
+}
+
+.avisClient .avis2 h3 {
+  margin-top: 5px;
+  font-size: 2rem;
+}
+
+.avisClient .avisTexte {
+  width: 491px;
+  height: 315px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  line-height: 25px;
+  position: absolute;
+  top: 25%;
+  left: 54%;
+  box-shadow: 7px 20px 10px #00000014;
+}
+
+.avisClient .avisTexte > h4 {
+  margin-bottom: 20px;
+}
+
+.avisClient .avisTexte > div > h4 {
+  margin-top: 30px;
+}
+
+footer {
+  height: 430px;
+  width: 100%;
+  background-color: #ededed;
+  justify-content: space-between;
+  padding: 100px 10px;
+  line-height: 2rem;
+  display: flex;
+  position: relative;
+}
+
+footer h3 {
+  color: #282f65;
+  font-size: 1.5rem;
+}
+
+footer > div {
+  width: 23%;
+}
+
+footer > div:first-child h3 {
+  font-size: 2rem;
+}
+
+footer > div:first-child p {
+  color: #626262;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #626262;
+  width: 45%;
+  text-decoration: none;
+}
+
+footer .socialMedia {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+footer .mentionLegal {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #282f65;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 25px;
+    display: flex;
+  }
+
+  nav > div {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  nav > div #links {
+    height: max-content;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: translate(0, 125.758%);
+  }
+
+  nav > div #links a.active {
+    color: #282f65;
+    position: relative;
+  }
+
+  nav > div #links a {
+    color: #aeaeae;
+    height: 100%;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+  }
+
+  nav > div #links a:nth-child(2) {
+    margin: 0 10px;
+  }
+
+  nav > div input {
+    display: none;
+  }
+
+  nav > div input:checked ~ #links {
+    transform: translate(100%, 125.758%);
+  }
+
+  nav span {
+    color: #282f65;
+    font-size: 2.2rem;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  .jumbotron {
+    height: 500px;
+    width: 100%;
+    background: url("pexels-pixabay-358636_1.58092e00.png") 0 0 / 100% 100% no-repeat;
+    margin: 15px auto 0;
+    display: flex;
+  }
+
+  .jumbotron .title {
+    width: 50%;
+    padding: 100px 0 0 70px;
+  }
+
+  .jumbotron .title h1 {
+    color: #fff;
+    margin: 25px 0;
+    font-size: 3rem;
+  }
+
+  .jumbotron .title h1 span {
+    color: #c0dff8;
+  }
+
+  .jumbotron .title p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 30px;
+  }
+
+  .jumbotron .avis {
+    width: 50%;
+    position: relative;
+  }
+
+  .jumbotron .avis .first {
+    background-color: #3e3e3e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 25%;
+    left: 46%;
+    transform: translate(-70%, -100%);
+  }
+
+  .jumbotron .avis .second {
+    background-color: #0006;
+    border-radius: 5px;
+    padding: 5px 20px 5px 25px;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-55%, -50%);
+  }
+
+  .jumbotron .avis img {
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .jumbotron .avis #homme_rose {
+    top: 10%;
+    left: 54%;
+  }
+
+  .jumbotron .avis #homme_bleu {
+    top: 28%;
+    left: 17.5%;
+  }
+
+  .jumbotron .avis #homme_marron {
+    z-index: 1;
+    top: 33%;
+    left: 75%;
+  }
+
+  .jumbotron .avis #homme_chapeau {
+    z-index: 1;
+    top: 49%;
+    left: 25%;
+  }
+
+  .jumbotron .avis #homme_echarpe {
+    top: 55%;
+    left: 66%;
+  }
+
+  .jumbotron .avis #femme_violette {
+    top: 70%;
+    left: 31.5%;
+  }
+
+  .jumbotron .avis .box {
+    width: 299px;
+    height: 72px;
+    color: #fff;
+    background-color: #0006;
+    border-radius: 4px;
+    padding: 12px 16px;
+    line-height: 25px;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+
+  .jumbotron .avis .box1 {
+    width: 252px;
+    height: 80px;
+    color: #fff;
+    text-align: center;
+    background-color: #0006;
+    border-radius: 4px;
+    padding: 16px 37px 16px 72px;
+    line-height: 25px;
+    position: relative;
+    top: 45%;
+    left: 22.5%;
+  }
+
+  .jumbotron .avis .box1 svg {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-70%, -60%);
+  }
+
+  form {
+    width: 100%;
+    background-color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    box-shadow: 0 8px 40px #00000014;
+  }
+
+  form .searchWord {
+    width: 45%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  form .searchWord .loupe {
+    min-height: 100%;
+    align-items: center;
+    padding: 0 0 0 8px;
+    display: flex;
+  }
+
+  form .searchWord select {
+    color: #aeaeae;
+    width: 100%;
+    background-color: #0000;
+    border: none;
+    padding: 15px 7px;
+  }
+
+  form .searchType {
+    width: 45%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  form .searchType .house {
+    min-height: 100%;
+    align-items: center;
+    padding: 0 0 0 8px;
+    display: flex;
+  }
+
+  form .searchType select {
+    color: #aeaeae;
+    width: 100%;
+    background-color: #0000;
+    border: none;
+    padding: 15px 7px;
+  }
+
+  form .searchType select option {
+    color: #f8f8f8;
+  }
+
+  form .localisation {
+    width: 45%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  form .localisation .iconLocalisation {
+    min-height: 100%;
+    align-items: center;
+    padding: 0 0 0 8px;
+    display: flex;
+  }
+
+  form .localisation input {
+    color: #aeaeae;
+    width: 100%;
+    background-color: #0000;
+    border: none;
+    padding: 15px 7px;
+  }
+
+  form button {
+    width: 45%;
+    background-color: #ffa800;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .partners {
+    width: 90%;
+    margin: 100px auto 0;
+    padding-bottom: 75px;
+  }
+
+  .partners h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  .partners h2 div {
+    width: 175px;
+    height: 15px;
+    z-index: -2;
+    background-color: #79dcf2;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-29%, 120%);
+  }
+
+  .partners p {
+    color: #626262;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .partners > p {
+    margin-bottom: 4%;
+  }
+
+  .partners .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+  }
+
+  .partners .container > div:first-child {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .partners .container .information {
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .partners .container .information > div {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .partners .container .information > div > span {
+    color: #79dcf2;
+    font-weight: 800;
+  }
+
+  .partners .container .information .fiable-efficace {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+    display: flex;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency {
+    display: flex;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency > svg {
+    margin-right: 20px;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency span {
+    color: #282f65;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency p {
+    color: #aeaeae;
+    font-size: 1rem;
+  }
+
+  .partners .littleImage {
+    padding-top: 60px;
+  }
+
+  .partners .littleImage img {
+    width: 250px;
+    height: 271px;
+  }
+
+  .partners .bigImage img {
+    width: 500px;
+    height: 331px;
+  }
+
+  .partners img {
+    border-radius: 5px;
+  }
+
+  .partners .information {
+    padding-top: 60px;
+  }
+
+  .services {
+    width: 100%;
+    background-color: #ededed;
+    padding-top: 25px;
+  }
+
+  .services h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .services .containerCard {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+  }
+
+  .services .containerCard .card {
+    width: 40%;
+    height: 404px;
+    background-color: #fff;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 20px 10px;
+    display: flex;
+  }
+
+  .services .containerCard .card p {
+    width: 70%;
+    margin: auto;
+  }
+
+  .services .containerCard .card button {
+    color: #ffa800;
+    background: none;
+    border: 1px solid #ffa800;
+    border-radius: 5px;
+    margin-right: 0;
+    padding: 15px 20px;
+  }
+
+  footer {
+    height: 430px;
+    width: 100%;
+    background-color: #ededed;
+    justify-content: space-between;
+    padding: 100px 10px;
+    line-height: 2rem;
+    display: flex;
+    position: relative;
+  }
+
+  footer h3 {
+    color: #282f65;
+    font-size: 1.5rem;
+  }
+
+  footer > div {
+    width: 23%;
+  }
+
+  footer > div:first-child h3 {
+    font-size: 2rem;
+  }
+
+  footer > div:first-child p {
+    color: #626262;
+    font-size: 1rem;
+  }
+
+  footer a {
+    color: #626262;
+    width: 45%;
+    text-decoration: none;
+  }
+
+  footer .socialMedia {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  footer .mentionLegal {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #282f65;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .jumbotron .avis {
+    display: none;
+  }
+
+  .jumbotron .title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  nav {
+    width: 1237px;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 25px;
+    display: flex;
+  }
+
+  nav > div {
+    align-items: center;
+    display: flex;
+  }
+
+  nav > div > div:first-child {
+    width: max-content;
+    align-items: center;
+    display: flex;
+  }
+
+  nav > div #links {
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 4%;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+  }
+
+  nav > div #links a.active {
+    color: #282f65;
+    position: relative;
+    bottom: 3px;
+  }
+
+  nav > div #links a.active:after {
+    content: "";
+    width: 7px;
+    height: 4px;
+    background-color: #282f65;
+    transition: width .35s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  nav > div #links a:hover:after {
+    width: 20px;
+  }
+
+  nav > div #links a {
+    color: #aeaeae;
+    height: 100%;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+  }
+
+  nav > div #links a:nth-child(2) {
+    margin: 0 10px;
+  }
+
+  nav > div input {
+    display: none;
+  }
+
+  nav > div input:checked ~ #links {
+    transform: translate(0);
+  }
+
+  nav > div label[for="responsiveNav"] {
+    display: none;
+  }
+
+  nav span {
+    color: #282f65;
+    font-size: 2.2rem;
+  }
+
+  nav button {
+    width: 186px;
+    height: 40px;
+    color: #ffa800;
+    background: none;
+    border: 1px solid #ffa800;
+    border-radius: 5px;
+    margin-right: 15px;
+    padding: 0 17px;
+    display: block;
+  }
+
+  .jumbotron {
+    height: 500px;
+    width: 1237px;
+    background: url("pexels-pixabay-358636_1.58092e00.png") 0 0 / 100% 100% no-repeat;
+    margin: 15px auto 0;
+    display: flex;
+  }
+
+  .jumbotron .title {
+    width: 50%;
+    padding: 100px 0 0 70px;
+  }
+
+  .jumbotron .title h1 {
+    color: #fff;
+    margin: 25px 0;
+    font-size: 3.8rem;
+  }
+
+  .jumbotron .title h1 span {
+    color: #c0dff8;
+  }
+
+  .jumbotron .title p {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 40px;
+  }
+
+  .jumbotron .avis {
+    width: 50%;
+    position: relative;
+  }
+
+  .jumbotron .avis .first {
+    background-color: #3e3e3e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-70%, -100%);
+  }
+
+  .jumbotron .avis .second {
+    background-color: #0006;
+    border-radius: 5px;
+    padding: 5px 20px 5px 25px;
+    position: absolute;
+    top: 70%;
+    left: 49%;
+    transform: translate(-55%, -50%);
+  }
+
+  .jumbotron .avis img {
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .jumbotron .avis #homme_rose {
+    top: 10%;
+    left: 58%;
+  }
+
+  .jumbotron .avis #homme_bleu {
+    top: 28%;
+    left: 21.5%;
+  }
+
+  .jumbotron .avis #homme_marron {
+    z-index: 1;
+    top: 33%;
+    left: 79%;
+  }
+
+  .jumbotron .avis #homme_chapeau {
+    z-index: 1;
+    top: 49%;
+    left: 29%;
+  }
+
+  .jumbotron .avis #homme_echarpe {
+    top: 55%;
+    left: 70%;
+  }
+
+  .jumbotron .avis #femme_violette {
+    top: 70%;
+    left: 35.5%;
+  }
+
+  .jumbotron .avis .box {
+    width: 299px;
+    height: 72px;
+    color: #fff;
+    background-color: #0006;
+    border-radius: 4px;
+    padding: 12px 16px;
+    line-height: 25px;
+    position: absolute;
+    top: 23%;
+    left: 36%;
+  }
+
+  .jumbotron .avis .box1 {
+    width: 252px;
+    height: 80px;
+    color: #fff;
+    text-align: center;
+    background-color: #0006;
+    border-radius: 4px;
+    padding: 16px 37px 16px 72px;
+    line-height: 25px;
+    position: relative;
+    top: 45%;
+    left: 26.5%;
+  }
+
+  .jumbotron .avis .box1 svg {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-70%, -60%);
+  }
+
+  form {
+    width: 1237px;
+    background-color: #fff;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    box-shadow: 0 8px 40px #00000014;
+  }
+
+  form .searchWord {
+    width: 25%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  form .searchWord .loupe {
+    min-height: 100%;
+    align-items: center;
+    padding: 0 0 0 8px;
+    display: flex;
+  }
+
+  form .searchWord select {
+    color: #aeaeae;
+    width: 100%;
+    background-color: #0000;
+    border: none;
+    padding: 15px 7px;
+  }
+
+  form .searchType {
+    width: 25%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  form .searchType .house {
+    min-height: 100%;
+    align-items: center;
+    padding: 0 0 0 8px;
+    display: flex;
+  }
+
+  form .searchType select {
+    color: #aeaeae;
+    width: 100%;
+    background-color: #0000;
+    border: none;
+    padding: 15px 7px;
+  }
+
+  form .searchType select option {
+    color: #f8f8f8;
+  }
+
+  form .localisation {
+    width: 25%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  form .localisation .iconLocalisation {
+    min-height: 100%;
+    align-items: center;
+    padding: 0 0 0 8px;
+    display: flex;
+  }
+
+  form .localisation input {
+    color: #aeaeae;
+    width: 100%;
+    background-color: #0000;
+    border: none;
+    padding: 15px 7px;
+  }
+
+  form button {
+    width: 20%;
+    background-color: #ffa800;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .partners {
+    width: 1237px;
+    margin: 100px auto 0;
+    padding-bottom: 75px;
+  }
+
+  .partners h2 {
+    text-align: start;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  .partners h2 div {
+    width: 175px;
+    height: 15px;
+    z-index: -2;
+    background-color: #79dcf2;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(33%, 120%);
+  }
+
+  .partners p {
+    color: #626262;
+    text-align: start;
+    font-size: 1.3rem;
+  }
+
+  .partners > p {
+    margin-bottom: 4%;
+  }
+
+  .partners .container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .partners .container > div:first-child {
+    display: flex;
+  }
+
+  .partners .container .information {
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .partners .container .information > div > span {
+    color: #79dcf2;
+    font-weight: 800;
+  }
+
+  .partners .container .information .fiable-efficace {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency {
+    display: flex;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency > svg {
+    margin-right: 20px;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency span {
+    color: #282f65;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .partners .container .information .fiable-efficace .efficiency p {
+    color: #aeaeae;
+    font-size: 1rem;
+  }
+
+  .partners .littleImage {
+    margin: 0 30px 0 15px;
+    padding-top: 60px;
+  }
+
+  .partners img {
+    border-radius: 5px;
+  }
+
+  .partners .information {
+    padding-top: 60px;
+  }
+
+  .services {
+    background-color: #ededed;
+    padding: 50px 0 100px;
+  }
+
+  .services h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .services .containerCard {
+    justify-content: center;
+    display: flex;
+  }
+
+  .services .containerCard .card {
+    width: 314px;
+    height: 404px;
+    background-color: #fff;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding: 20px 10px;
+    display: flex;
+  }
+
+  .services .containerCard .card button {
+    color: #ffa800;
+    background: none;
+    border: 1px solid #ffa800;
+    border-radius: 5px;
+    margin-right: 15px;
+    padding: 15px 20px;
+  }
+
+  .estimation {
+    width: 1237px;
+    background-color: #282f65;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    padding: 70px 50px;
+    display: flex;
+  }
+
+  .estimation p {
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .estimation p span {
+    font-size: 2.8rem;
+  }
+
+  .estimation div {
+    align-items: center;
+    display: flex;
+  }
+
+  .estimation div input {
+    width: 300px;
+    height: 100%;
+    border: none;
+    padding: 12px;
+  }
+
+  .estimation div span {
+    color: #fff;
+    height: 100%;
+    background-color: #ffa800;
+    padding: 10px 25px;
+  }
+
+  .avisClient {
+    width: 1440px;
+    justify-content: flex-end;
+    margin: auto;
+    padding-right: 7.5%;
+    display: flex;
+    position: relative;
+  }
+
+  .avisClient .portrait {
+    width: 62.5%;
+    flex-direction: row-reverse;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .avisClient .portrait img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 10px;
+  }
+
+  .avisClient .portrait img.active {
+    height: 500px;
+    width: 400px;
+  }
+
+  .avisClient .avis2 {
+    width: 37.5%;
+    padding: 10px 7.5%;
+  }
+
+  .avisClient .avis2 span {
+    color: #79dcf2;
+  }
+
+  .avisClient .avis2 h3 {
+    margin-top: 5px;
+    font-size: 2rem;
+  }
+
+  .avisClient .avisTexte {
+    width: 491px;
+    height: 315px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    line-height: 25px;
+    position: absolute;
+    top: 25%;
+    left: 54%;
+    box-shadow: 7px 20px 10px #00000014;
+  }
+
+  .avisClient .avisTexte > h4 {
+    margin-bottom: 20px;
+  }
+
+  .avisClient .avisTexte > div > h4 {
+    margin-top: 30px;
+  }
+
+  footer {
+    height: 430px;
+    width: 100%;
+    background-color: #ededed;
+    justify-content: space-between;
+    padding: 100px;
+    line-height: 2rem;
+    display: flex;
+    position: relative;
+  }
+
+  footer h3 {
+    color: #282f65;
+    font-size: 1.5rem;
+  }
+
+  footer > div:first-child h3 {
+    font-size: 2rem;
+  }
+
+  footer > div:first-child p {
+    color: #626262;
+    font-size: 1rem;
+  }
+
+  footer a {
+    color: #626262;
+    text-decoration: none;
+  }
+
+  footer .socialMedia {
+    display: flex;
+  }
+
+  footer .mentionLegal {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #282f65;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=index.d71aca1e.css.map */
