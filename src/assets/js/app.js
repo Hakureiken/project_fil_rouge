@@ -9,30 +9,60 @@ console.log(image0,image1,image2);
 
 swapToRight.addEventListener('click', function () {
 
-    if (image2.classList == "active") {
-        image2.classList.remove('active');
-        image0.classList.add('active');
+    if (window.innerWidth <= 1400) {
+        if (image2.classList == "active") {
+            image2.classList.remove('active');
+            image0.classList.add('active');
 
-        image0.style.transform = "translateX(0px)";
-        image1.style.transform = "translateX(0px)";
-        image2.style.transform = "translateX(0px)";
+            image0.style.transform = "translateX(0px)";
+            image1.style.transform = "translateX(0px)";
+            image2.style.transform = "translateX(0px)";
 
-    } else if (image1.classList == "active") {
-        image1.classList.remove('active');
-        image2.classList.add('active');
+        } else if (image1.classList == "active") {
+            image1.classList.remove('active');
+            image2.classList.add('active');
 
-        image0.style.transform = "translateX(-137%)";
-        image1.style.transform = "translateX(-137%)";
-        image2.style.transform = "translateX(161%)";
+            image0.style.transform = "translateX(-100%)";
+            image1.style.transform = "translateX(-100%)";
+            image2.style.transform = "translateX(200%)";
 
-    } else if (image0.classList == "active") {
-        image0.classList.remove('active');
-        image1.classList.add('active');
+        } else if (image0.classList == "active") {
+            image0.classList.remove('active');
+            image1.classList.add('active');
 
-        image0.style.transform = "translateX(-245%)";
-        image1.style.transform = "translateX(80%)";
-        image2.style.transform = "translateX(100%)";
+            image0.style.transform = "translateX(-200%)";
+            image1.style.transform = "translateX(100%)";
+            image2.style.transform = "translateX(100%)";
+        }
+    } else {
+        
+        if (image2.classList == "active") {
+            image2.classList.remove('active');
+            image0.classList.add('active');
+    
+            image0.style.transform = "translateX(0px)";
+            image1.style.transform = "translateX(0px)";
+            image2.style.transform = "translateX(0px)";
+    
+        } else if (image1.classList == "active") {
+            image1.classList.remove('active');
+            image2.classList.add('active');
+    
+            image0.style.transform = "translateX(-137%)";
+            image1.style.transform = "translateX(-137%)";
+            image2.style.transform = "translateX(161%)";
+    
+        } else if (image0.classList == "active") {
+            image0.classList.remove('active');
+            image1.classList.add('active');
+    
+            image0.style.transform = "translateX(-245%)";
+            image1.style.transform = "translateX(80%)";
+            image2.style.transform = "translateX(100%)";
+        }
     }
+
+    
 
 })
 
