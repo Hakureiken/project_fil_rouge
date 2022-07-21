@@ -1681,6 +1681,7 @@ footer .mentionLegal {
   .avisClient .portrait img {
     height: 400px;
     width: 300px;
+    opacity: .5;
     object-fit: cover;
     object-position: 20%;
     margin: 10px;
@@ -1689,6 +1690,7 @@ footer .mentionLegal {
   .avisClient .portrait img.active {
     height: 500px;
     width: 400px;
+    opacity: 1;
   }
 
   .avisClient .avis2 {

@@ -1648,6 +1648,7 @@ footer {
                 height: 400px;
                 width: 300px;
                 margin: 10px;
+                opacity: .5;
                 object-fit: cover;
                 object-position: 20%;
                 
@@ -1655,6 +1656,7 @@ footer {
                 &.active {
                     height: 500px;
                     width: 400px;
+                    opacity: 1;
                 }
                 
             }
